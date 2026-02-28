@@ -1,0 +1,246 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ccc;
+}
+a{text-decoration: none;
+    color: azure;}
+.wrapper{
+  height: 100%;
+    background-color: #ccc;
+    overflow: hidden;
+    width: 393px;
+  background: #fff;
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #ACCCE0;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+.page2{
+    width: 393px;
+    height: 852px;
+    background-color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center
+}
+
+.page2 .logo{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    position: fixed; /* 固定位置 */
+    top: 10px;       /* 距離頂部 10px (可調整) */
+    left: 37%;      /* 距離左側 10px (可調整) */
+    z-index: 1000;   /* 確保在其他內容之上 */
+    width: 100px;    /* Logo 寬度 (可調整) */
+
+}
+
+.page2 .logo img{
+    height: 100%;
+    display: block;
+}
+
+.page2 .box{
+    width: 393px;
+    height: 650px;
+    vertical-align: center;
+    justify-content: center;
+    background-color:#fff;
+}
+
+.page2 .box .title{
+    font-size: 32px;
+    text-align: center;
+}
+
+.calander {
+    /* padding: 70px 25px; */
+    width: 100%;
+    background: #fff;
+}
+ 
+.calander ul {
+    margin: 0;
+    padding: 0;
+}
+ 
+.calander ul li {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* letter-spacing: 3px; */
+}
+ 
+.weekdays {
+    margin: 0;
+    padding: 10px 13px;
+    font-size: 12px;
+}
+ 
+.weekdays li {
+    display: inline-block;
+    width: 13.3%;
+    color: #666;
+    text-align: center;
+}
+ 
+.days {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    text-align: left;
+    margin-left: 10px;
+}
+ 
+.days td {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.3%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size:16px;
+    color: black;
+}
+ 
+.days td .active {
+    padding: 5px;
+    background: #ACCCE0;
+    color: white;
+    border-radius: 8px;
+}
+
+.page2 .box .btn{
+    text-align: center;
+}
+
+
+.page2 .box .btn1{
+    display: inline-block;
+    padding: 8px 15px;
+    /* line-height:24px; */
+    /* text-align:center; */
+    text-decoration:none;
+    font-size: 14px;
+    color: black;
+    background: #fff;
+    border: 1px #ACCCE0 solid;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.page2 .box .btn2{
+    display: inline-block;
+    padding: 8px 15px;
+    /* line-height:24px; */
+    /* text-align:center; */
+    text-decoration:none;
+    font-size: 14px;
+    color: #fff;
+    background: #ACCCE0;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.page2 .box .next{
+    text-align: right;
+}
+.page2 .box .next a{
+    color: #ACCCE0;
+    margin-right: 5px;
+}
