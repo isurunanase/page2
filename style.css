@@ -1,5 +1,4 @@
 /* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -30,81 +29,8 @@ a{text-decoration: none;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
-header .icons{
-  display: flex;
-}
-header .icons span{
-  height: 38px;
-  width: 38px;
-  margin: 0 1px;
-  cursor: pointer;
-  color: #878787;
-  text-align: center;
-  line-height: 38px;
-  font-size: 1.9rem;
-  user-select: none;
-  border-radius: 50%;
-}
-.icons span:last-child{
-  margin-right: -10px;
-}
-header .icons span:hover{
-  background: #f2f2f2;
-}
-header .current-date{
-  font-size: 1.45rem;
-  font-weight: 500;
-}
-.calendar{
-  padding: 20px;
-}
-.calendar ul{
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  text-align: center;
-}
-.calendar .days{
-  margin-bottom: 20px;
-}
-.calendar li{
-  color: #333;
-  width: calc(100% / 7);
-  font-size: 1.07rem;
-}
-.calendar .weeks li{
-  font-weight: 500;
-  cursor: default;
-}
-.calendar .days li{
-  z-index: 1;
-  cursor: pointer;
-  position: relative;
-  margin-top: 15px;
-}
-.days li.inactive{
-  color: #aaa;
-}
-.days li.active{
-  color: #fff;
-}
-.days li::before{
-  position: absolute;
-  content: "";
-  left: 50%;
-  top: 50%;
-  height: 40px;
-  width: 40px;
-  z-index: -1;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-.days li.active::before{
-  background: #ACCCE0;
-}
-.days li:not(.active):hover::before{
-  background: #f2f2f2;
-}
+
+
 .page2{
     width: 393px;
     height: 852px;
@@ -148,23 +74,31 @@ header .current-date{
     text-align: center;
 }
 
-.calander {
-    /* padding: 70px 25px; */
+.flatpickr-calendar {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+.flatpickr-day.selected {
+  background: red;
+  border-color: pink;
+}
+
+.flatpickr-day:hover {
+  background: pink;
+}
+
+.calendar {
+  display: flex;
+   justify-content: center;
+    align-items: center;
     width: 100%;
     background: #fff;
 }
  
-.calander ul {
-    margin: 0;
-    padding: 0;
-}
- 
-.calander ul li {
-    color: black;
-    font-size: 20px;
-    text-transform: uppercase;
-    /* letter-spacing: 3px; */
-}
+
  
 .weekdays {
     margin: 0;
@@ -223,6 +157,13 @@ header .current-date{
     border-radius: 12px;
     margin-bottom: 10px;
 }
+.page2 .box .btn1:focus{
+    transform: translate(0,0);
+    background-color: #ACCCE0;
+    transition: all 0.05s;
+    color:#fff ;
+}
+
 
 .page2 .box .btn2{
     display: inline-block;
